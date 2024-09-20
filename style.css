@@ -4,10 +4,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     font-family: "Jersey 10", sans-serif;
     font-weight: 50;
     display: flex;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
     margin: 0;
     flex-direction: column;
     align-items: center;
@@ -19,20 +23,25 @@ body{
     background-color: #9ec91e;
     margin: 0rem 20rem;
     height: 100vh;
-    width: 700px;
+    width: 100%;
+    max-width: 700px;
 }
 .my-container button{
     font-size: 5rem;
     border-radius: 10px;
     border: 2px solid rgba(240,240,240,255);
-    margin: 0 9px;
+    margin: 10px auto;
     cursor: pointer;
 }
 #choices{
-    margin-left: 9rem;
+    margin: 5px auto;
 }
     
-
+.scores{
+    display: flex;
+    align-items: end;
+    padding: 20px auto;
+}
 #playerDisplay{
     font-size: 2.2rem;
     text-align: center;
@@ -40,37 +49,63 @@ body{
  #computerDisplay{
     font-size: 2.2rem;
     text-align: center;
-    margin-top: 2rem;
+    margin: 0 auto;
 }
 #resultDisplay{
     font-size: 2.6rem;
-    margin: 30px px;
+    margin: 0 auto;
     text-align: center;
     background-color: #f8c830;
     height: 3.5rem;
     align-items: center;
 }
+@media screen and (max-width: 768px) {
+    .my-container {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .my-container button {
+        font-size: 2rem; 
+        width: 60px;
+        height: 60px;
+    }
+
+    #playerDisplay, #computerDisplay, #resultDisplay, #playerScore, #computerScore {
+        font-size: 1.2rem; 
+    }
+
+    .computer, .player {
+        width: 80px; 
+        height: 80px;
+        font-size: 3rem;
+    }
+    .scores {
+        font-size: 10px;
+
+    }
+}
 .computer{
+    display: flex;
     align-items: center;
     text-align: center;
     border: 2px dashed black;
-    margin: .5px;
-    width: 120px;
     height: 120px;
-    margin-left: 18rem;
+    width: 120px;
+    margin: 20px auto;
     font-size: 5rem;
-    margin-bottom: 2rem;
+    padding: 10px;
 }
 .player{
+    display: flex;
     align-items: center;
     text-align: center;
     border: 2px dashed black;
-    margin: .5px;
-    width: 120px;
     height: 120px;
-    margin-left: 18rem;
+    width: 120px;
+    margin: 20px auto;
     font-size: 5rem;
-    margin-bottom: 2rem;
+    padding: 10px;
 }
 
 
